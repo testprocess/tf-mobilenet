@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
-import numpy
 import os
 import tensorflow as tf
 
 print(tf.version.VERSION)
-tf.config.list_physical_devices()
+tf.config.experimental.list_physical_devices('GPU')
 
 IMAGENET_TEST_IMAGE = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
 UNZIP_PATH = tf.keras.utils.get_file("cats_and_dogs.zip", origin=IMAGENET_TEST_IMAGE, extract=True)
